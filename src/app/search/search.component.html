@@ -1,0 +1,21 @@
+<div>
+    <form class="weather-form">
+      <mat-form-field>
+        <input 
+        type="text" 
+        placeholder="Enter City" 
+        [formControl]="searchCitiesCtrl"
+        matInput
+        [(ngModel)]="city"
+        [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete" >
+              <mat-option *ngFor="let option of options" [value]="option" (onSelectionChange)="getWeatherData(option)">
+                {{option}}
+              </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
+    <div class="mt-5">
+      <button mat-button [ngClass]="{ 'disable-button' : !city }" (click)="getWeatherData(city)">Submit</button>
+    </div>
+  </div>

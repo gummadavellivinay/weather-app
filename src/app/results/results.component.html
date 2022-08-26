@@ -1,0 +1,18 @@
+<div class="results">
+    <div class="mt-5">
+        <button mat-button (click)="goToSearch()" class="go-back-btn">Back to Search</button>
+    </div>
+    <div class="weather-info" *ngIf="weatherData">
+        <div>
+            <h1>Location: <span>{{ locationName || '' }}</span> </h1>
+        <div>
+            <label>Current Temperature: <span>{{ currentTempF || '' }} F / {{ currentTempC || '' }} C </span> </label>
+        </div>
+        <div>
+            <label>Condition Text: <span>{{ condition || '' }}</span> </label>
+        </div>
+        <div>
+            <label>Wind in MPH: <span>{{ wind || '' }} in MpH</span> </label>
+        </div>
+    </div>
+</div>

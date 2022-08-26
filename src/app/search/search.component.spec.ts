@@ -1,17 +1,16 @@
 import { TestBed } from '@angular/core/testing';
-import { AppComponent } from './app.component';
-
-describe('AppComponent', () => {
+import { SearchComponent } from './search.component';
+describe('SearchComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        SearchComponent
       ],
     }).compileComponents();
   });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
+  it('should create the Component', () => {
+    const fixture = TestBed.createComponent(SearchComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
